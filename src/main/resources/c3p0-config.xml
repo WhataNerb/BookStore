@@ -1,0 +1,22 @@
+<c3p0-config>
+    <named-config name="c3p0DataSource">
+        <!-- 基本数据源属性 -->
+        <property name="user">root</property>
+        <property name="password">1234</property>
+        <property name="jdbcUrl">jdbc:mysql:///bookstore</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+
+        <!-- 若数据库中连接数不足时, 一次向数据库服务器申请多少个连接 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时的连接数量 -->
+        <property name="initialPoolSize">1</property>
+        <!-- 数据库连接池中的最小/大连接数 -->
+        <property name="minPoolSize">1</property>
+        <property name="maxPoolSize">10</property>
+
+        <!-- C3P0数据库连接池可以维护的 Statement 个数 -->
+        <property name="maxStatements">20</property>
+        <!-- 每个连接同时可以使用的 Statement 个数 -->
+        <property name="maxStatementsPerConnection">5</property>
+    </named-config>
+</c3p0-config>
